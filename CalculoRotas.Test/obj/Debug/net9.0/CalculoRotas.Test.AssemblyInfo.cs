@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalculoRotas.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cb14083f76a176a8a84d06ae1a148ea6b4354f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalculoRotas.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalculoRotas.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
