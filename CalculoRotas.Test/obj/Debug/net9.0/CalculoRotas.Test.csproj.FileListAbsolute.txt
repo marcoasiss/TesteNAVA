@@ -103,3 +103,4 @@ C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas.Test\obj\Debug\net9.0\refint\Cal
 C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas.Test\obj\Debug\net9.0\CalculoRotas.Test.pdb
 C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas.Test\obj\Debug\net9.0\CalculoRotas.Test.genruntimeconfig.cache
 C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas.Test\obj\Debug\net9.0\ref\CalculoRotas.Test.dll
+c:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas.Test\obj\Debug\net9.0\CalculoRotas.Test.sourcelink.json

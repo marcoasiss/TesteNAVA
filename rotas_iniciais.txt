@@ -1,0 +1,14 @@
+## Arquivo de entrada ##
+Formato:
+Rota, Origem, Destino, Valor
+
+Rotas iniciais
+GRU-BRC, GRU, BRC,10
+BRC-SCL, BRC,SCL,5
+GRU-CDG, GRU,CDG,75
+GRU-SCL, GRU,SCL, 20
+GRU-ORL, GRU,ORL,56
+ORL,CDG,5
+SCL,ORL,20
+GRU-BRC-SCL-ORL-CDG,GRU,CDG,40
+GRU-BRC-SCL-ORL,GRU,ORL,35

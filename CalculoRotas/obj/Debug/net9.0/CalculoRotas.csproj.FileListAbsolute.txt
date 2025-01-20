@@ -12,3 +12,4 @@ C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\refint\CalculoR
 C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\CalculoRotas.pdb
 C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\CalculoRotas.genruntimeconfig.cache
 C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\ref\CalculoRotas.dll
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\CalculoRotas.sourcelink.json

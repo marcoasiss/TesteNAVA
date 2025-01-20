@@ -1,0 +1,73 @@
+
+
+Passos para a execução do projeto:
+
+1) Abra a solution CalculoRotas.sln e execute o projeto CalculoRotas.
+
+2) Você receberá as instruções
+	1. Adicionar Nova Rota 
+	2. Consultar Menor Rota
+        3. Sair
+
+3)Na opção Adicionar Nova Rota , você receberá as instruções para a incluir das informações , uma a uma:
+
+Ex: 
+	Rota: GRU-BRC-SCL-ORL-CDG
+        Origem: GRU
+	Destino: CDG
+
+Ao incluir , receberá a confirmação de inclusão do arquivo e você poderá conferir se o mesmo foi salvo
+
+
+4) Na opção Consultar Nova Rota, você receberá as instruções para a incluir a rota desejada:
+
+Ex: Digite a rota que deseja consultar (Origem-Destino)
+    Resposta do usuário: GRU-ORL
+    Menor rota encontrada: Rota: GRU-BRC-SCL-ORL, Origem: GRU, Destino: ORL, Valor: 35
+ 
+A rota recomendada será a que possuir o menor valor de viagem , independente do tamanho da rota
+
+
+5) Execução dos testes unitários
+
+Dentro do projeto de teste unitário CalculoRotas.Test . No projeto será possível realizar 3 casos de teste:
+
+- Leitura de arquivo das Rotas
+- Adição de Nova Rota
+- Consulta de Menor Rota
+
+
+
+Importante:
+
+ - Obedecer o padrão de inclusão das rotas , sempre usando o caractere "-" sem espaços por entre as siglas de origem e destino . EX: GRU-BRC-SCL-ORL
+ - O programa realiza a leitura e gravação dos dados no arquivo "rotas-iniciais".txt , que consta dentro do diretório do projeto
+
+
+
+Exemplo do arquivo
+## Arquivo de entrada ##
+Formato:
+Rota, Origem, Destino, Valor
+
+Rotas iniciais
+GRU-BRC, GRU, BRC,10
+BRC-SCL, BRC,SCL,5
+GRU-CDG, GRU,CDG,75
+GRU-SCL, GRU,SCL, 20
+GRU-ORL, GRU,ORL,56
+ORL,CDG,5
+SCL,ORL,20
+GRU-BRC-SCL-ORL-CDG,GRU,CDG,40
+GRU-BRC-SCL-ORL,GRU,ORL,35
+
+
+Design da solução:
+
+Desenvolvi a estrutura de forma simples , obedecendo princípios básicos do SOLID como o de responsabilidade única, tentando
+separando os métodos de acordo com a sua função principal e evitando ao máximo que ele não acumule funções diferentes. Escolhi como solução de 
+estruturação dos objetos das Rotas o uso das TUPLAS , pois permitem o armazenamento de dados de diferentes tipos e fácil manipulação dos dados.
+Realizei validações e tratamentos de exceções , e por fim o projeto de teste unitário com os casos de teste mais críticos. 
+
+
+

@@ -1,33 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.Runtime.CompilerServices;
 
 public class Program
 {
     static void Main()
     {
-        // Define o caminho do arquivo de entrada (ajuste conforme necessário).
-        string filePath = @"C:\\Users\\MICRO\\Documents\\rotas_iniciais.txt";
-
-        // Lê o arquivo e cria a lista de tuplas.
-        var rotas = LerArquivoEFormarTuplas(filePath);
-
-        // Exibe as informações no console.
-        foreach (var rota in rotas)
-        {
-            Console.WriteLine($"Rota: {rota.Item1}, Origem: {rota.Item2}, Destino: {rota.Item3}, Valor: {rota.Item4}");
-        }
-
-        // Permitir que o usuário insira uma nova rota.
-        AdicionarNovaRota(filePath);
-
-        // Permitir que o usuário consulte a menor rota.
-        ConsultarMenorRota(rotas);
+        ExibirMenuDeOpcoes();
     }
 
-    public static List<Tuple<string, string, string, int>> LerArquivoEFormarTuplas(string filePath)
+    public static void ExibirMenuDeOpcoes(){
+
+        string filePath = LerCaminhoArquivo();     
+
+        // Exibe o menu principal
+            Console.WriteLine("Digite a opção que deseja:");
+            Console.WriteLine("1 - Adicionar Nova Rota");
+            Console.WriteLine("2 - Consultar Menor Rota");
+            Console.WriteLine("0 - Sair");
+
+        // Lê a entrada do usuário
+        string opcao = Console.ReadLine();
+
+            switch (opcao)
+            {
+                case "1":
+                    AdicionarNovaRota();
+                    break;
+
+                case "2":
+                    ConsultarMenorRota(filePath);
+                    break;
+
+                case "0":
+                    Console.WriteLine("Encerrando o programa...");
+                    return;
+
+                default:
+                    Console.WriteLine("Opção inválida. Tente novamente.\n");
+                    break;
+            }
+
+    }
+
+    public static List<Tuple<string, string, string, int>> CriarListaDeRotas(string filePath)
     {
+
         var listaDeRotas = new List<Tuple<string, string, string, int>>();
 
         // Verifica se o arquivo existe.
@@ -37,6 +53,7 @@ public class Program
             return listaDeRotas;
         }
 
+         
         // Lê todas as linhas do arquivo.
         var linhas = File.ReadAllLines(filePath);
 
@@ -66,8 +83,17 @@ public class Program
         return listaDeRotas;
     }
 
-    public static void AdicionarNovaRota(string filePath)
+    private static string LerCaminhoArquivo(){
+        
+        // Define o caminho do arquivo
+        string filePath = @"C:\\Users\\MICRO\\Documents\\rotas_iniciais.txt";
+
+        return filePath;
+    }
+
+    public static void AdicionarNovaRota()
     {
+         
         Console.WriteLine("\nDigite as informações da nova rota:");
 
         Console.Write("Rota: ");
@@ -89,10 +115,12 @@ public class Program
         // Formata a nova linha.
         string novaLinha = $"{rota},{origem},{destino},{valor}";
 
+        string filePath = LerCaminhoArquivo();
+
         // Adiciona a nova linha ao arquivo.
         try
         {
-            File.AppendAllText(filePath,"\n" + novaLinha);
+            File.AppendAllText(filePath, "\n" + novaLinha);
             Console.WriteLine("Nova rota adicionada com sucesso!");
 
         }
@@ -102,7 +130,7 @@ public class Program
         }
     }
 
-    public static void ConsultarMenorRota(List<Tuple<string, string, string, int>> rotas)
+    public static void ConsultarMenorRota(string filePath)
     {
         Console.WriteLine("\nDigite a rota que deseja consultar (Origem-Destino):");
         string rotaConsulta = Console.ReadLine()?.Trim();
@@ -118,10 +146,13 @@ public class Program
         {
             Console.WriteLine("Formato de rota inválido. Use Origem-Destino.");
             return;
-        }
+        }   
 
         string origem = partes[0].Trim();
         string destino = partes[1].Trim();
+
+    
+        var rotas = CriarListaDeRotas(filePath);
 
         // Filtra as rotas com a origem e destino especificados e encontra a de menor valor.
         var menorRota = rotas

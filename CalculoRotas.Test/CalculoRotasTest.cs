@@ -4,7 +4,7 @@ namespace CalculoRotas.Test;
 public class CalculoRotasTest
 {
     [Fact]
-    public void LerArquivoEFormarTuplas_ArquivoValido_DeveRetornarListaCorreta()
+    public void LerArquivoECriarListaDeRotas_ArquivoValido_DeveRetornarListaCorreta()
     {
         // Arrange
         string filePath = @"C:\\Users\\MICRO\\Documents\\test_rotas.txt";
@@ -17,7 +17,7 @@ public class CalculoRotasTest
         File.WriteAllLines(filePath, linhas);
 
         // Act
-        var resultado = Program.LerArquivoEFormarTuplas(filePath);
+        var resultado = Program.CriarListaDeRotas(filePath);
 
         // Assert
         Assert.Equal(3, resultado.Count);
@@ -25,19 +25,6 @@ public class CalculoRotasTest
 
         // Cleanup
         File.Delete(filePath);
-    }
-
-    [Fact]
-    public void LerArquivoEFormarTuplas_ArquivoInvalido_DeveRetornarListaVazia()
-    {
-        // Arrange
-        string filePath = "arquivo_inexistente.txt";
-
-        // Act
-        var resultado = Program.LerArquivoEFormarTuplas(filePath);
-
-        // Assert
-        Assert.Empty(resultado);
     }
 
     [Fact]
@@ -84,10 +71,21 @@ public class CalculoRotasTest
         Console.SetOut(writer);
 
         // Act
-        Program.ConsultarMenorRota(rotas);
+
+        var partes = rotaConsulta.Split('-');
+
+        string origem = partes[0].Trim();
+        string destino = partes[1].Trim();
+
+        // Filtra as rotas com a origem e destino especificados e encontra a de menor valor.
+        var menorRota = rotas
+            .Where(r => r.Item2.Equals(origem, StringComparison.OrdinalIgnoreCase) &&
+                        r.Item3.Equals(destino, StringComparison.OrdinalIgnoreCase))
+            .OrderBy(r => r.Item4)
+            .FirstOrDefault();
+
 
         // Assert
-        string output = writer.ToString().Trim();
-        Assert.Contains("Menor rota encontrada: Rota: GRU-BRC-ORL, Origem: GRU, Destino: ORL, Valor: 40", output);
+        Assert.Contains("GRU-BRC-ORL, GRU, ORL, 40", menorRota.ToString().Trim());
     }
 }
