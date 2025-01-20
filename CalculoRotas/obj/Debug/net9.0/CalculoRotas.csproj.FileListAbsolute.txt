@@ -1,0 +1,14 @@
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\CalculoRotas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\CalculoRotas.AssemblyInfoInputs.cache
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\CalculoRotas.AssemblyInfo.cs
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\CalculoRotas.csproj.CoreCompileInputs.cache
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\bin\Debug\net9.0\CalculoRotas.exe
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\bin\Debug\net9.0\CalculoRotas.deps.json
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\bin\Debug\net9.0\CalculoRotas.runtimeconfig.json
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\bin\Debug\net9.0\CalculoRotas.dll
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\bin\Debug\net9.0\CalculoRotas.pdb
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\CalculoRotas.dll
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\refint\CalculoRotas.dll
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\CalculoRotas.pdb
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\CalculoRotas.genruntimeconfig.cache
+C:\Users\MICRO\Projetos\Teste NAVA\CalculoRotas\obj\Debug\net9.0\ref\CalculoRotas.dll
